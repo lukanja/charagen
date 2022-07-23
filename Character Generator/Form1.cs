@@ -36,6 +36,24 @@ namespace Character_Generator
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }      
+        }
+
+        private void testDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatabaseControl db = new DatabaseControl();
+            string doesitwork;
+            db.ConnectDatabase();
+            if (db.ConnectDatabase() == true)
+            {
+                doesitwork = "Connection works.";
+                db.DisconnectDatabase();
+            }
+            else
+            {
+                doesitwork = "Connection doesn't work.";
+            }
+
+            MessageBox.Show(doesitwork);
+        }
     }
 }

@@ -41,6 +41,7 @@ namespace Character_Generator
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonCreationMode = new System.Windows.Forms.Button();
+            this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxMainForm.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@ namespace Character_Generator
             this.menuStrip1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infoToolStripMenuItem,
+            this.testDatabaseToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -64,7 +66,7 @@ namespace Character_Generator
             this.versionToolStripMenuItem,
             this.sourcesToolStripMenuItem});
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // createdByToolStripMenuItem
@@ -72,31 +74,31 @@ namespace Character_Generator
             this.createdByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lukaAirassalo2022ToolStripMenuItem});
             this.createdByToolStripMenuItem.Name = "createdByToolStripMenuItem";
-            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.createdByToolStripMenuItem.Text = "Created by";
             // 
             // lukaAirassalo2022ToolStripMenuItem
             // 
             this.lukaAirassalo2022ToolStripMenuItem.Name = "lukaAirassalo2022ToolStripMenuItem";
-            this.lukaAirassalo2022ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.lukaAirassalo2022ToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.lukaAirassalo2022ToolStripMenuItem.Text = "Luka Airassalo, 2022";
             // 
             // versionToolStripMenuItem
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.versionToolStripMenuItem.Text = "Version";
             // 
             // sourcesToolStripMenuItem
             // 
             this.sourcesToolStripMenuItem.Name = "sourcesToolStripMenuItem";
-            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.sourcesToolStripMenuItem.Text = "Sources";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -168,6 +170,13 @@ namespace Character_Generator
             this.buttonCreationMode.UseWaitCursor = true;
             this.buttonCreationMode.Click += new System.EventHandler(this.buttonCreationMode_Click);
             // 
+            // testDatabaseToolStripMenuItem
+            // 
+            this.testDatabaseToolStripMenuItem.Name = "testDatabaseToolStripMenuItem";
+            this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.testDatabaseToolStripMenuItem.Text = "Test Database";
+            this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +215,7 @@ namespace Character_Generator
         private System.Windows.Forms.Button buttonInfo;
         private System.Windows.Forms.Button buttonView;
         private System.Windows.Forms.Button buttonCreationMode;
+        private System.Windows.Forms.ToolStripMenuItem testDatabaseToolStripMenuItem;
     }
 }
 

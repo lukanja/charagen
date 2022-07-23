@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Character_Generator;
 
 namespace Character_Generator
 {
     public partial class GeneratorForm : Form
     {
+        DatabaseControl databaseControl = new DatabaseControl();
+        string lifephase;
+
         public GeneratorForm()
         {
             InitializeComponent();
+        }
+
+
+        private void buttonGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxLifePhase.Text = databaseControl.GenerateTrait();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -26,3 +37,7 @@ namespace Character_Generator
         }
     }
 }
+
+
+    
+
