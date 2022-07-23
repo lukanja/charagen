@@ -38,22 +38,23 @@ namespace Character_Generator
             }
         }
 
-         public string GenerateTrait()
+         public string GenerateTrait(string wantedTrait)
         {
-            string wantedTrait;
+            string returnedTrait;
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlDataReader reader = null;
                 SqlCommand command = new SqlCommand(
-                "SELECT TOP 1 LifePhase FROM dbo.LifePhase ORDER BY NEWID();", connection); //change to variable later
+                "SELECT TOP 1" + wantedTrait +" FROM dbo." + wantedTrait + " ORDER BY NEWID();", connection); //change to variable later
                 connection.Open();
                 reader = command.ExecuteReader();
                 reader.Read();
-                wantedTrait = reader.GetString(0);
+                returnedTrait = reader.GetString(0);
                 reader.Close();
             }
 
-            return wantedTrait;
+            return returnedTrait;
         }
 
         public void DisconnectDatabase()

@@ -15,7 +15,6 @@ namespace Character_Generator
     public partial class GeneratorForm : Form
     {
         DatabaseControl databaseControl = new DatabaseControl();
-        string lifephase;
 
         public GeneratorForm()
         {
@@ -25,7 +24,12 @@ namespace Character_Generator
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            textBoxLifePhase.Text = databaseControl.GenerateTrait();
+            textBoxLifePhase.Text = databaseControl.GenerateTrait("LifePhase");
+            textBoxMainTrait.Text = databaseControl.GenerateTrait("MainTrait");
+            textBoxMainStrength.Text = databaseControl.GenerateTrait("MainStrength");
+            textBoxMainFlaw.Text = databaseControl.GenerateTrait("MainFlaw");
+            textBoxGoal.Text = databaseControl.GenerateTrait("Goal");
+            textBoxSecret.Text = databaseControl.GenerateTrait("Secret");
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
