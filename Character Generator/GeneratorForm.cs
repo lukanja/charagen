@@ -24,6 +24,7 @@ namespace Character_Generator
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
+            //generator working based on database table and object names
             textBoxLifePhase.Text = databaseControl.GenerateTrait("LifePhase");
             textBoxMainTrait.Text = databaseControl.GenerateTrait("MainTrait");
             textBoxMainStrength.Text = databaseControl.GenerateTrait("MainStrength");
@@ -38,6 +39,32 @@ namespace Character_Generator
             this.Close();
             MainForm mainForm = new MainForm();
             mainForm.Show();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            // creating a new character, getting trait ID's from textboxes
+            CharacterModel newCharacter = new CharacterModel(
+                666, // temporary ID, INSERT INTO command will create a proper one
+                databaseControl.GetID("LifePhase", textBoxLifePhase.Text), 
+                databaseControl.GetID("MainTrait", textBoxMainTrait.Text),
+                databaseControl.GetID("MainStrength", textBoxMainStrength.Text),
+                databaseControl.GetID("MainFlaw", textBoxMainFlaw.Text),
+                databaseControl.GetID("Goal", textBoxGoal.Text),
+                databaseControl.GetID("Secret", textBoxSecret.Text)
+                );
+            // saving the character
+            try
+            {
+                databaseControl.SaveCharacter(newCharacter);
+                MessageBox.Show("Saving successful!");
+            }
+
+            catch (Exception error)
+            {
+                MessageBox.Show("Error = " + error.ToString());
+            }
+            
         }
     }
 }

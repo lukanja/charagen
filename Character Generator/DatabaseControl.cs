@@ -38,15 +38,20 @@ namespace Character_Generator
             }
         }
 
-         public string GenerateTrait(string wantedTrait)
+        public void DisconnectDatabase()
+        {
+            dbConnection.Close();
+        }
+
+        public string GenerateTrait(string wantedTrait)
         {
             string returnedTrait;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString)) // using statement doesn't leave the connection open
             {
                 SqlDataReader reader = null;
                 SqlCommand command = new SqlCommand(
-                "SELECT TOP 1" + wantedTrait +" FROM dbo." + wantedTrait + " ORDER BY NEWID();", connection); //change to variable later
+                "SELECT TOP 1" + wantedTrait +" FROM dbo." + wantedTrait + " ORDER BY NEWID();", connection); //rearranges the target table and gets the top value 
                 connection.Open();
                 reader = command.ExecuteReader();
                 reader.Read();
@@ -57,10 +62,52 @@ namespace Character_Generator
             return returnedTrait;
         }
 
-        public void DisconnectDatabase()
+        public int GetID(string wantedID, string textboxcontent) 
         {
-            dbConnection.Close();
+            int returnedID;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataReader reader = null;
+                SqlCommand command = new SqlCommand("SELECT Id FROM dbo." + wantedID + " WHERE " + wantedID + " = '" + textboxcontent+ "';", connection);
+                connection.Open();
+                reader = command.ExecuteReader();
+                reader.Read();
+                returnedID = (int)reader.GetValue(0);
+                reader.Close();
+            }
+            return returnedID;
         }
+
+
+
+        public bool SaveCharacter(CharacterModel newCharacter)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    SqlCommand savingCommand = new SqlCommand("INSERT INTO dbo.Characters (LifePhaseId, MainTraitId, MainStrengthId, MainFlawId, GoalId, SecretId)"
+                        +"Values (" +
+                        newCharacter.LifePhaseId + ", " +
+                        newCharacter.MainTraitId + ", " +
+                        newCharacter.MainStrengthId + ", " +
+                        newCharacter.MainFlawId + ", " +
+                        newCharacter.GoalId + ", " +
+                        newCharacter.SecretId + ")", connection);
+                    savingCommand.ExecuteNonQuery();
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                    return false;
+                }
+            }
+            return true;
+        }
+       
     }
 }
 

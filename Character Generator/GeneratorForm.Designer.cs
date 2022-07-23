@@ -239,6 +239,7 @@ namespace Character_Generator
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Text = "Save Character";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // GeneratorForm
             // 
