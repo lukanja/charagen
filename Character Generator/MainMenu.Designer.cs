@@ -35,13 +35,13 @@ namespace Character_Generator
             this.lukaAirassalo2022ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxMainForm = new System.Windows.Forms.GroupBox();
             this.IntroText = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonCreationMode = new System.Windows.Forms.Button();
-            this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxMainForm.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,13 @@ namespace Character_Generator
             this.sourcesToolStripMenuItem.Name = "sourcesToolStripMenuItem";
             this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.sourcesToolStripMenuItem.Text = "Sources";
+            // 
+            // testDatabaseToolStripMenuItem
+            // 
+            this.testDatabaseToolStripMenuItem.Name = "testDatabaseToolStripMenuItem";
+            this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.testDatabaseToolStripMenuItem.Text = "Test Database";
+            this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -155,6 +162,7 @@ namespace Character_Generator
             this.buttonView.Text = "View Saved Characters";
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.UseWaitCursor = true;
+            this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // buttonCreationMode
             // 
@@ -169,13 +177,6 @@ namespace Character_Generator
             this.buttonCreationMode.UseVisualStyleBackColor = true;
             this.buttonCreationMode.UseWaitCursor = true;
             this.buttonCreationMode.Click += new System.EventHandler(this.buttonCreationMode_Click);
-            // 
-            // testDatabaseToolStripMenuItem
-            // 
-            this.testDatabaseToolStripMenuItem.Name = "testDatabaseToolStripMenuItem";
-            this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.testDatabaseToolStripMenuItem.Text = "Test Database";
-            this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
             // 
             // MainForm
             // 

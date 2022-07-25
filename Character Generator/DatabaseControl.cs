@@ -107,7 +107,53 @@ namespace Character_Generator
             }
             return true;
         }
+
+        public CharacterModel GetCharacter()
+        {
+            CharacterModel Character;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataReader reader = null;
+                SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM dbo.Characters ORDER BY NEWID();", connection);
+                connection.Open();
+                reader = command.ExecuteReader();
+                reader.Read();
+                
+                int id = (int)reader.GetValue(0);
+                int lifephase = (int)reader.GetValue(1);
+                int trait = (int)reader.GetValue(2);
+                int strength = (int)reader.GetValue(3);
+                int flaw = (int)reader.GetValue(4);
+                int goal = (int)reader.GetValue(5);
+                int secret = (int)reader.GetValue(6);
+
+                Character = new CharacterModel(id,lifephase,trait,strength,flaw,goal,secret);
+            }
+                return Character;
+        }
+
+        public string TraitFromId(int traitid, string wantedTrait)
+        {
+            string resultTrait;
+
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataReader reader = null;
+                SqlCommand command = new SqlCommand("SELECT " +wantedTrait+"."+wantedTrait+" FROM dbo."+wantedTrait+
+                    " INNER JOIN Characters ON " + wantedTrait+".Id=Characters."+wantedTrait+"Id" +
+                    " WHERE " + wantedTrait + ".Id="+ traitid.ToString()+";", connection);
+                connection.Open();
+                reader = command.ExecuteReader();
+                reader.Read();
+                resultTrait = reader.GetString(0);
+                reader.Close();
+            }
+
+            return resultTrait;
+        }
        
     }
+
 }
 

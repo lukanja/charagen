@@ -10,3 +10,4 @@ C:\Users\Käyttäjä\source\repos\Character Generator\Character Generator\obj\De
 C:\Users\Käyttäjä\source\repos\Character Generator\Character Generator\obj\Debug\Character Generator.pdb
 C:\Users\Käyttäjä\source\repos\Character Generator\Character Generator\obj\Debug\Character_Generator.InstructionForm.resources
 C:\Users\Käyttäjä\source\repos\Character Generator\Character Generator\obj\Debug\Character_Generator.GeneratorForm.resources
+C:\Users\Käyttäjä\source\repos\Character Generator\Character Generator\obj\Debug\Character_Generator.BrowsingForm.resources
