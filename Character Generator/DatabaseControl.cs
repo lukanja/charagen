@@ -31,6 +31,8 @@ namespace Character_Generator
                 dbConnection.Open();
                 return true;
             }
+
+            // for connection testing purposes
             catch (Exception e)
             {
                 Console.WriteLine("Virheilmoitukset:" + e);
@@ -62,7 +64,8 @@ namespace Character_Generator
             return returnedTrait;
         }
 
-        public int GetID(string wantedID, string textboxcontent) 
+        
+        public int GetID(string wantedID, string textboxcontent)  //finds the ID of relevant trait via textbox
         {
             int returnedID;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -80,7 +83,7 @@ namespace Character_Generator
 
 
 
-        public bool SaveCharacter(CharacterModel newCharacter)
+        public bool SaveCharacter(CharacterModel newCharacter) //for saving a character
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -108,14 +111,14 @@ namespace Character_Generator
             return true;
         }
 
-        public CharacterModel GetCharacter()
+        public CharacterModel GetCharacter() //for getting a random saved character
         {
             CharacterModel Character;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlDataReader reader = null;
-                SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM dbo.Characters ORDER BY NEWID();", connection);
+                SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM dbo.Characters ORDER BY NEWID();", connection); //rearranges the table and picks the first row
                 connection.Open();
                 reader = command.ExecuteReader();
                 reader.Read();
@@ -128,20 +131,20 @@ namespace Character_Generator
                 int goal = (int)reader.GetValue(5);
                 int secret = (int)reader.GetValue(6);
 
-                Character = new CharacterModel(id,lifephase,trait,strength,flaw,goal,secret);
+                Character = new CharacterModel(id,lifephase,trait,strength,flaw,goal,secret); //saves the table values into a character object
             }
                 return Character;
         }
 
-        public string TraitFromId(int traitid, string wantedTrait)
+        public string TraitFromId(int traitid, string wantedTrait) //finds the proper trait as string based on id
         {
             string resultTrait;
 
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlDataReader reader = null;
-                SqlCommand command = new SqlCommand("SELECT " +wantedTrait+"."+wantedTrait+" FROM dbo."+wantedTrait+
-                    " INNER JOIN Characters ON " + wantedTrait+".Id=Characters."+wantedTrait+"Id" +
+                SqlCommand command = new SqlCommand("SELECT " +wantedTrait+ "." +wantedTrait+ " FROM dbo." +wantedTrait+
+                    " INNER JOIN Characters ON " + wantedTrait+ ".Id=Characters." +wantedTrait+"Id" +
                     " WHERE " + wantedTrait + ".Id="+ traitid.ToString()+";", connection);
                 connection.Open();
                 reader = command.ExecuteReader();
@@ -151,6 +154,28 @@ namespace Character_Generator
             }
 
             return resultTrait;
+        }
+
+        public bool DeleteCharacter(int delCharacter) //for deleting a character
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                try
+                {
+                    SqlCommand command = new SqlCommand(
+                        "DELETE FROM dbo.Characters WHERE Id ="+delCharacter, connection);
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                    return false;
+                }
+            }
         }
        
     }

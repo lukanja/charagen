@@ -44,7 +44,10 @@ namespace Character_Generator
         private void buttonSave_Click(object sender, EventArgs e)
         {
             // creating a new character, getting trait ID's from textboxes
-            CharacterModel newCharacter = new CharacterModel(
+
+            if (textBoxLifePhase.Text != "") // check for empty boxes (all are either empty or not)
+            { 
+                CharacterModel newCharacter = new CharacterModel(
                 666, // temporary ID, INSERT INTO command will create a proper one
                 databaseControl.GetID("LifePhase", textBoxLifePhase.Text), 
                 databaseControl.GetID("MainTrait", textBoxMainTrait.Text),
@@ -53,18 +56,24 @@ namespace Character_Generator
                 databaseControl.GetID("Goal", textBoxGoal.Text),
                 databaseControl.GetID("Secret", textBoxSecret.Text)
                 );
-            // saving the character
-            try
-            {
-                databaseControl.SaveCharacter(newCharacter);
-                MessageBox.Show("Saving successful!");
-            }
 
-            catch (Exception error)
-            {
-                MessageBox.Show("Error = " + error.ToString());
+                // saving the character
+                try
+                {
+                    databaseControl.SaveCharacter(newCharacter);
+                    MessageBox.Show("Saving completed.", "Success!");
+                }
+
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error = " + error.ToString());
+                }
             }
             
+            else
+            {
+                MessageBox.Show("Generate a character first.", "Error!");
+            }
         }
     }
 }

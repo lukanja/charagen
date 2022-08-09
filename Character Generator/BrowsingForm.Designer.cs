@@ -44,6 +44,7 @@ namespace Character_Generator
             this.textBoxGoal = new System.Windows.Forms.TextBox();
             this.textBoxSecret = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.textBoxCharacterId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -51,7 +52,7 @@ namespace Character_Generator
             this.buttonClose.AutoSize = true;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(140, 418);
+            this.buttonClose.Location = new System.Drawing.Point(146, 405);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(185, 28);
             this.buttonClose.TabIndex = 0;
@@ -64,9 +65,9 @@ namespace Character_Generator
             // 
             this.buttonGetRandom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGetRandom.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetRandom.Location = new System.Drawing.Point(140, 34);
+            this.buttonGetRandom.Location = new System.Drawing.Point(146, 38);
             this.buttonGetRandom.Name = "buttonGetRandom";
-            this.buttonGetRandom.Size = new System.Drawing.Size(180, 42);
+            this.buttonGetRandom.Size = new System.Drawing.Size(185, 42);
             this.buttonGetRandom.TabIndex = 1;
             this.buttonGetRandom.Text = "Show A Random Character";
             this.buttonGetRandom.UseVisualStyleBackColor = true;
@@ -128,9 +129,9 @@ namespace Character_Generator
             this.label6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(273, 15);
+            this.label6.Size = new System.Drawing.Size(217, 15);
             this.label6.TabIndex = 7;
-            this.label6.Text = "What they hide from the world is their";
+            this.label6.Text = "They hide from the world their";
             // 
             // textBoxLifePhase
             // 
@@ -180,17 +181,17 @@ namespace Character_Generator
             // textBoxSecret
             // 
             this.textBoxSecret.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSecret.Location = new System.Drawing.Point(302, 273);
+            this.textBoxSecret.Location = new System.Drawing.Point(246, 273);
             this.textBoxSecret.Name = "textBoxSecret";
             this.textBoxSecret.ReadOnly = true;
-            this.textBoxSecret.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSecret.Size = new System.Drawing.Size(203, 22);
             this.textBoxSecret.TabIndex = 13;
             // 
             // buttonDelete
             // 
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(140, 374);
+            this.buttonDelete.Location = new System.Drawing.Point(146, 349);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(185, 28);
             this.buttonDelete.TabIndex = 14;
@@ -198,11 +199,20 @@ namespace Character_Generator
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // textBoxCharacterId
+            // 
+            this.textBoxCharacterId.Location = new System.Drawing.Point(26, 96);
+            this.textBoxCharacterId.Name = "textBoxCharacterId";
+            this.textBoxCharacterId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterId.TabIndex = 15;
+            this.textBoxCharacterId.Visible = false;
+            // 
             // BrowsingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 486);
+            this.Controls.Add(this.textBoxCharacterId);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxSecret);
             this.Controls.Add(this.textBoxGoal);
@@ -247,5 +257,6 @@ namespace Character_Generator
         private System.Windows.Forms.TextBox textBoxGoal;
         private System.Windows.Forms.TextBox textBoxSecret;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TextBox textBoxCharacterId;
     }
 }

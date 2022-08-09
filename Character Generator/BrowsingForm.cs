@@ -33,7 +33,18 @@ namespace Character_Generator
             
             if (result == DialogResult.Yes)
             {
-                //delete character
+                if (databaseControl.DeleteCharacter(int.Parse(textBoxCharacterId.Text)) == true) //using invisible textbox to identify character
+                {
+                    MessageBox.Show("Character deleted.","Success!");
+
+                    // empty fields
+                    textBoxLifePhase.Text = string.Empty;
+                    textBoxTrait.Text = string.Empty;
+                    textBoxStrength.Text = string.Empty;
+                    textBoxFlaw.Text = string.Empty;
+                    textBoxGoal.Text = string.Empty;
+                    textBoxSecret.Text = string.Empty;
+                }
             }
 
             else
@@ -46,16 +57,17 @@ namespace Character_Generator
 
         private void buttonGetRandom_Click(object sender, EventArgs e)
         {
+            //gets a random character
             CharacterModel character = databaseControl.GetCharacter();
-
+            //gets character ID into an invisible box
+            textBoxCharacterId.Text = character.ID.ToString();
+            //sets the correct traits into textboxes
             textBoxLifePhase.Text = databaseControl.TraitFromId(character.LifePhaseId, "LifePhase");
             textBoxTrait.Text = databaseControl.TraitFromId(character.MainTraitId, "MainTrait");
             textBoxStrength.Text = databaseControl.TraitFromId(character.MainStrengthId, "MainStrength");
             textBoxFlaw.Text = databaseControl.TraitFromId(character.MainFlawId, "MainFlaw");
             textBoxGoal.Text = databaseControl.TraitFromId(character.GoalId, "Goal");
-            textBoxSecret.Text = databaseControl.TraitFromId(character.SecretId, "Secret");
-
-            
+            textBoxSecret.Text = databaseControl.TraitFromId(character.SecretId, "Secret");  
         }
     }
 }
