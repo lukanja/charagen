@@ -81,6 +81,7 @@ namespace Character_Generator
             this.textBoxSecret.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSecret.Location = new System.Drawing.Point(157, 289);
             this.textBoxSecret.Name = "textBoxSecret";
+            this.textBoxSecret.ReadOnly = true;
             this.textBoxSecret.Size = new System.Drawing.Size(243, 15);
             this.textBoxSecret.TabIndex = 12;
             // 
@@ -91,6 +92,7 @@ namespace Character_Generator
             this.textBoxGoal.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGoal.Location = new System.Drawing.Point(157, 252);
             this.textBoxGoal.Name = "textBoxGoal";
+            this.textBoxGoal.ReadOnly = true;
             this.textBoxGoal.Size = new System.Drawing.Size(243, 15);
             this.textBoxGoal.TabIndex = 11;
             // 
@@ -101,6 +103,7 @@ namespace Character_Generator
             this.textBoxMainFlaw.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMainFlaw.Location = new System.Drawing.Point(157, 212);
             this.textBoxMainFlaw.Name = "textBoxMainFlaw";
+            this.textBoxMainFlaw.ReadOnly = true;
             this.textBoxMainFlaw.Size = new System.Drawing.Size(243, 15);
             this.textBoxMainFlaw.TabIndex = 10;
             // 
@@ -111,6 +114,7 @@ namespace Character_Generator
             this.textBoxMainStrength.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMainStrength.Location = new System.Drawing.Point(157, 173);
             this.textBoxMainStrength.Name = "textBoxMainStrength";
+            this.textBoxMainStrength.ReadOnly = true;
             this.textBoxMainStrength.Size = new System.Drawing.Size(243, 15);
             this.textBoxMainStrength.TabIndex = 9;
             // 
@@ -121,6 +125,7 @@ namespace Character_Generator
             this.textBoxMainTrait.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMainTrait.Location = new System.Drawing.Point(157, 132);
             this.textBoxMainTrait.Name = "textBoxMainTrait";
+            this.textBoxMainTrait.ReadOnly = true;
             this.textBoxMainTrait.Size = new System.Drawing.Size(243, 15);
             this.textBoxMainTrait.TabIndex = 8;
             // 
@@ -131,6 +136,7 @@ namespace Character_Generator
             this.textBoxLifePhase.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLifePhase.Location = new System.Drawing.Point(157, 94);
             this.textBoxLifePhase.Name = "textBoxLifePhase";
+            this.textBoxLifePhase.ReadOnly = true;
             this.textBoxLifePhase.Size = new System.Drawing.Size(243, 15);
             this.textBoxLifePhase.TabIndex = 7;
             // 

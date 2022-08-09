@@ -16,8 +16,8 @@ namespace Character_Generator
         {
             InitializeComponent();
         }
-
-        private void buttonCloseForm_Click(object sender, EventArgs e)
+ 
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             //closes this form and reopens main form
             this.Close();

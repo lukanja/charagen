@@ -63,5 +63,10 @@ namespace Character_Generator
             browsingForm.Show();
             this.Hide();
         }
+
+        private void createDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Database creating function not ready. :(");
+        }
     }
 }

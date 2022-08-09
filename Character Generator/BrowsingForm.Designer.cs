@@ -52,9 +52,9 @@ namespace Character_Generator
             this.buttonClose.AutoSize = true;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(146, 405);
+            this.buttonClose.Location = new System.Drawing.Point(146, 434);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(185, 28);
+            this.buttonClose.Size = new System.Drawing.Size(185, 32);
             this.buttonClose.TabIndex = 0;
             this.buttonClose.Text = "Back To Main Menu";
             this.buttonClose.UseMnemonic = false;
@@ -65,9 +65,9 @@ namespace Character_Generator
             // 
             this.buttonGetRandom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGetRandom.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetRandom.Location = new System.Drawing.Point(146, 38);
+            this.buttonGetRandom.Location = new System.Drawing.Point(146, 40);
             this.buttonGetRandom.Name = "buttonGetRandom";
-            this.buttonGetRandom.Size = new System.Drawing.Size(185, 42);
+            this.buttonGetRandom.Size = new System.Drawing.Size(185, 45);
             this.buttonGetRandom.TabIndex = 1;
             this.buttonGetRandom.Text = "Show A Random Character";
             this.buttonGetRandom.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@ namespace Character_Generator
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 136);
+            this.label1.Location = new System.Drawing.Point(23, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 15);
             this.label1.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace Character_Generator
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 164);
+            this.label2.Location = new System.Drawing.Point(23, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 15);
             this.label2.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace Character_Generator
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 192);
+            this.label3.Location = new System.Drawing.Point(23, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(266, 15);
             this.label3.TabIndex = 4;
@@ -107,7 +107,7 @@ namespace Character_Generator
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 220);
+            this.label4.Location = new System.Drawing.Point(23, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 15);
             this.label4.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace Character_Generator
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 248);
+            this.label5.Location = new System.Drawing.Point(23, 265);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 15);
             this.label5.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace Character_Generator
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 276);
+            this.label6.Location = new System.Drawing.Point(23, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(217, 15);
             this.label6.TabIndex = 7;
@@ -136,7 +136,7 @@ namespace Character_Generator
             // textBoxLifePhase
             // 
             this.textBoxLifePhase.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLifePhase.Location = new System.Drawing.Point(170, 133);
+            this.textBoxLifePhase.Location = new System.Drawing.Point(170, 142);
             this.textBoxLifePhase.Name = "textBoxLifePhase";
             this.textBoxLifePhase.ReadOnly = true;
             this.textBoxLifePhase.Size = new System.Drawing.Size(279, 22);
@@ -145,7 +145,7 @@ namespace Character_Generator
             // textBoxTrait
             // 
             this.textBoxTrait.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTrait.Location = new System.Drawing.Point(197, 161);
+            this.textBoxTrait.Location = new System.Drawing.Point(197, 172);
             this.textBoxTrait.Name = "textBoxTrait";
             this.textBoxTrait.ReadOnly = true;
             this.textBoxTrait.Size = new System.Drawing.Size(252, 22);
@@ -154,7 +154,7 @@ namespace Character_Generator
             // textBoxStrength
             // 
             this.textBoxStrength.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStrength.Location = new System.Drawing.Point(295, 189);
+            this.textBoxStrength.Location = new System.Drawing.Point(295, 202);
             this.textBoxStrength.Name = "textBoxStrength";
             this.textBoxStrength.ReadOnly = true;
             this.textBoxStrength.Size = new System.Drawing.Size(154, 22);
@@ -163,7 +163,7 @@ namespace Character_Generator
             // textBoxFlaw
             // 
             this.textBoxFlaw.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFlaw.Location = new System.Drawing.Point(274, 217);
+            this.textBoxFlaw.Location = new System.Drawing.Point(274, 232);
             this.textBoxFlaw.Name = "textBoxFlaw";
             this.textBoxFlaw.ReadOnly = true;
             this.textBoxFlaw.Size = new System.Drawing.Size(175, 22);
@@ -172,7 +172,7 @@ namespace Character_Generator
             // textBoxGoal
             // 
             this.textBoxGoal.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGoal.Location = new System.Drawing.Point(183, 245);
+            this.textBoxGoal.Location = new System.Drawing.Point(183, 262);
             this.textBoxGoal.Name = "textBoxGoal";
             this.textBoxGoal.ReadOnly = true;
             this.textBoxGoal.Size = new System.Drawing.Size(266, 22);
@@ -181,7 +181,7 @@ namespace Character_Generator
             // textBoxSecret
             // 
             this.textBoxSecret.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSecret.Location = new System.Drawing.Point(246, 273);
+            this.textBoxSecret.Location = new System.Drawing.Point(246, 292);
             this.textBoxSecret.Name = "textBoxSecret";
             this.textBoxSecret.ReadOnly = true;
             this.textBoxSecret.Size = new System.Drawing.Size(203, 22);
@@ -191,9 +191,9 @@ namespace Character_Generator
             // 
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(146, 349);
+            this.buttonDelete.Location = new System.Drawing.Point(146, 374);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(185, 28);
+            this.buttonDelete.Size = new System.Drawing.Size(185, 30);
             this.buttonDelete.TabIndex = 14;
             this.buttonDelete.Text = "Delete Character";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -201,15 +201,15 @@ namespace Character_Generator
             // 
             // textBoxCharacterId
             // 
-            this.textBoxCharacterId.Location = new System.Drawing.Point(26, 96);
+            this.textBoxCharacterId.Location = new System.Drawing.Point(26, 103);
             this.textBoxCharacterId.Name = "textBoxCharacterId";
-            this.textBoxCharacterId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterId.Size = new System.Drawing.Size(100, 21);
             this.textBoxCharacterId.TabIndex = 15;
             this.textBoxCharacterId.Visible = false;
             // 
             // BrowsingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 486);
             this.Controls.Add(this.textBoxCharacterId);
@@ -228,7 +228,7 @@ namespace Character_Generator
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGetRandom);
             this.Controls.Add(this.buttonClose);
-            this.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "BrowsingForm";
