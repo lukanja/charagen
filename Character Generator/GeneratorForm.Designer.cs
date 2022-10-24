@@ -30,11 +30,11 @@ namespace Character_Generator
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxSecret = new System.Windows.Forms.TextBox();
+            this.textBoxGoal = new System.Windows.Forms.TextBox();
+            this.textBoxMainFlaw = new System.Windows.Forms.TextBox();
+            this.textBoxMainStrength = new System.Windows.Forms.TextBox();
+            this.textBoxMainTrait = new System.Windows.Forms.TextBox();
             this.textBoxLifePhase = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@ namespace Character_Generator
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxSecret);
+            this.groupBox1.Controls.Add(this.textBoxGoal);
+            this.groupBox1.Controls.Add(this.textBoxMainFlaw);
+            this.groupBox1.Controls.Add(this.textBoxMainStrength);
+            this.groupBox1.Controls.Add(this.textBoxMainTrait);
             this.groupBox1.Controls.Add(this.textBoxLifePhase);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -74,55 +74,60 @@ namespace Character_Generator
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // textBox6
+            // textBoxSecret
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(157, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(243, 15);
-            this.textBox6.TabIndex = 12;
+            this.textBoxSecret.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxSecret.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSecret.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSecret.Location = new System.Drawing.Point(157, 289);
+            this.textBoxSecret.Name = "textBoxSecret";
+            this.textBoxSecret.ReadOnly = true;
+            this.textBoxSecret.Size = new System.Drawing.Size(243, 15);
+            this.textBoxSecret.TabIndex = 12;
             // 
-            // textBox5
+            // textBoxGoal
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(157, 252);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 15);
-            this.textBox5.TabIndex = 11;
+            this.textBoxGoal.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxGoal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGoal.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGoal.Location = new System.Drawing.Point(157, 252);
+            this.textBoxGoal.Name = "textBoxGoal";
+            this.textBoxGoal.ReadOnly = true;
+            this.textBoxGoal.Size = new System.Drawing.Size(243, 15);
+            this.textBoxGoal.TabIndex = 11;
             // 
-            // textBox4
+            // textBoxMainFlaw
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(157, 212);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 15);
-            this.textBox4.TabIndex = 10;
+            this.textBoxMainFlaw.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxMainFlaw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMainFlaw.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMainFlaw.Location = new System.Drawing.Point(157, 212);
+            this.textBoxMainFlaw.Name = "textBoxMainFlaw";
+            this.textBoxMainFlaw.ReadOnly = true;
+            this.textBoxMainFlaw.Size = new System.Drawing.Size(243, 15);
+            this.textBoxMainFlaw.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxMainStrength
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(157, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 15);
-            this.textBox3.TabIndex = 9;
+            this.textBoxMainStrength.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxMainStrength.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMainStrength.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMainStrength.Location = new System.Drawing.Point(157, 173);
+            this.textBoxMainStrength.Name = "textBoxMainStrength";
+            this.textBoxMainStrength.ReadOnly = true;
+            this.textBoxMainStrength.Size = new System.Drawing.Size(243, 15);
+            this.textBoxMainStrength.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxMainTrait
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(157, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 15);
-            this.textBox2.TabIndex = 8;
+            this.textBoxMainTrait.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxMainTrait.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMainTrait.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMainTrait.Location = new System.Drawing.Point(157, 132);
+            this.textBoxMainTrait.Name = "textBoxMainTrait";
+            this.textBoxMainTrait.ReadOnly = true;
+            this.textBoxMainTrait.Size = new System.Drawing.Size(243, 15);
+            this.textBoxMainTrait.TabIndex = 8;
             // 
             // textBoxLifePhase
             // 
@@ -131,6 +136,7 @@ namespace Character_Generator
             this.textBoxLifePhase.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLifePhase.Location = new System.Drawing.Point(157, 94);
             this.textBoxLifePhase.Name = "textBoxLifePhase";
+            this.textBoxLifePhase.ReadOnly = true;
             this.textBoxLifePhase.Size = new System.Drawing.Size(243, 15);
             this.textBoxLifePhase.TabIndex = 7;
             // 
@@ -160,9 +166,9 @@ namespace Character_Generator
             this.label4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(27, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 16);
+            this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Main Weakness";
+            this.label4.Text = "Main Flaw";
             // 
             // label3
             // 
@@ -239,6 +245,7 @@ namespace Character_Generator
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Text = "Save Character";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // GeneratorForm
             // 
@@ -271,11 +278,11 @@ namespace Character_Generator
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxSecret;
+        private System.Windows.Forms.TextBox textBoxGoal;
+        private System.Windows.Forms.TextBox textBoxMainFlaw;
+        private System.Windows.Forms.TextBox textBoxMainStrength;
+        private System.Windows.Forms.TextBox textBoxMainTrait;
         private System.Windows.Forms.TextBox textBoxLifePhase;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonSave;

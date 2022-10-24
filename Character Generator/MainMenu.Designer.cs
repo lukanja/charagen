@@ -35,13 +35,15 @@ namespace Character_Generator
             this.lukaAirassalo2022ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxMainForm = new System.Windows.Forms.GroupBox();
             this.IntroText = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonCreationMode = new System.Windows.Forms.Button();
-            this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxMainForm.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +54,7 @@ namespace Character_Generator
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infoToolStripMenuItem,
             this.testDatabaseToolStripMenuItem,
+            this.createDatabaseToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,7 +77,7 @@ namespace Character_Generator
             this.createdByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lukaAirassalo2022ToolStripMenuItem});
             this.createdByToolStripMenuItem.Name = "createdByToolStripMenuItem";
-            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createdByToolStripMenuItem.Text = "Created by";
             // 
             // lukaAirassalo2022ToolStripMenuItem
@@ -85,15 +88,24 @@ namespace Character_Generator
             // 
             // versionToolStripMenuItem
             // 
+            this.versionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.versionToolStripMenuItem.Text = "Version";
             // 
             // sourcesToolStripMenuItem
             // 
             this.sourcesToolStripMenuItem.Name = "sourcesToolStripMenuItem";
-            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sourcesToolStripMenuItem.Text = "Sources";
+            // 
+            // testDatabaseToolStripMenuItem
+            // 
+            this.testDatabaseToolStripMenuItem.Name = "testDatabaseToolStripMenuItem";
+            this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.testDatabaseToolStripMenuItem.Text = "Test Database";
+            this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -134,7 +146,7 @@ namespace Character_Generator
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInfo.Location = new System.Drawing.Point(118, 263);
+            this.buttonInfo.Location = new System.Drawing.Point(116, 292);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(240, 60);
             this.buttonInfo.TabIndex = 2;
@@ -148,20 +160,21 @@ namespace Character_Generator
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonView.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonView.Location = new System.Drawing.Point(118, 172);
+            this.buttonView.Location = new System.Drawing.Point(116, 201);
             this.buttonView.Name = "buttonView";
             this.buttonView.Size = new System.Drawing.Size(240, 60);
             this.buttonView.TabIndex = 1;
             this.buttonView.Text = "View Saved Characters";
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.UseWaitCursor = true;
+            this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // buttonCreationMode
             // 
             this.buttonCreationMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCreationMode.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreationMode.Location = new System.Drawing.Point(118, 88);
+            this.buttonCreationMode.Location = new System.Drawing.Point(116, 117);
             this.buttonCreationMode.Name = "buttonCreationMode";
             this.buttonCreationMode.Size = new System.Drawing.Size(240, 60);
             this.buttonCreationMode.TabIndex = 0;
@@ -170,12 +183,18 @@ namespace Character_Generator
             this.buttonCreationMode.UseWaitCursor = true;
             this.buttonCreationMode.Click += new System.EventHandler(this.buttonCreationMode_Click);
             // 
-            // testDatabaseToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.testDatabaseToolStripMenuItem.Name = "testDatabaseToolStripMenuItem";
-            this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.testDatabaseToolStripMenuItem.Text = "Test Database";
-            this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "1.0.0";
+            // 
+            // createDatabaseToolStripMenuItem
+            // 
+            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
+            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
+            this.createDatabaseToolStripMenuItem.Text = "Create Database";
+            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -216,6 +235,8 @@ namespace Character_Generator
         private System.Windows.Forms.Button buttonView;
         private System.Windows.Forms.Button buttonCreationMode;
         private System.Windows.Forms.ToolStripMenuItem testDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem createDatabaseToolStripMenuItem;
     }
 }
 

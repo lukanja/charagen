@@ -55,5 +55,18 @@ namespace Character_Generator
 
             MessageBox.Show(doesitwork);
         }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            //opens browsing form with and hides main form
+            BrowsingForm browsingForm = new BrowsingForm();
+            browsingForm.Show();
+            this.Hide();
+        }
+
+        private void createDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Database creating function not ready. :(");
+        }
     }
 }
