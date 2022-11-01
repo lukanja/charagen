@@ -5,4 +5,4 @@ Meant to be used as a prompt giver for characters to use in creative writing, ro
 
 Windows Forms app made with C# and a SQL database.
 
-Currently writing code for building the database (in app)
+Currently compiling clean SQL file + documentation
