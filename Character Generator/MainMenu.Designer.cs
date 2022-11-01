@@ -34,16 +34,16 @@ namespace Character_Generator
             this.createdByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lukaAirassalo2022ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxMainForm = new System.Windows.Forms.GroupBox();
             this.IntroText = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonCreationMode = new System.Windows.Forms.Button();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxMainForm.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@ namespace Character_Generator
             this.createdByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lukaAirassalo2022ToolStripMenuItem});
             this.createdByToolStripMenuItem.Name = "createdByToolStripMenuItem";
-            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createdByToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.createdByToolStripMenuItem.Text = "Created by";
             // 
             // lukaAirassalo2022ToolStripMenuItem
@@ -91,13 +91,19 @@ namespace Character_Generator
             this.versionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2});
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.versionToolStripMenuItem.Text = "Version";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.toolStripMenuItem2.Text = "1.0.0";
             // 
             // sourcesToolStripMenuItem
             // 
             this.sourcesToolStripMenuItem.Name = "sourcesToolStripMenuItem";
-            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sourcesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.sourcesToolStripMenuItem.Text = "Sources";
             // 
             // testDatabaseToolStripMenuItem
@@ -106,6 +112,13 @@ namespace Character_Generator
             this.testDatabaseToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.testDatabaseToolStripMenuItem.Text = "Test Database";
             this.testDatabaseToolStripMenuItem.Click += new System.EventHandler(this.testDatabaseToolStripMenuItem_Click);
+            // 
+            // createDatabaseToolStripMenuItem
+            // 
+            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
+            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.createDatabaseToolStripMenuItem.Text = "Database missing?";
+            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -182,19 +195,6 @@ namespace Character_Generator
             this.buttonCreationMode.UseVisualStyleBackColor = true;
             this.buttonCreationMode.UseWaitCursor = true;
             this.buttonCreationMode.Click += new System.EventHandler(this.buttonCreationMode_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem2.Text = "1.0.0";
-            // 
-            // createDatabaseToolStripMenuItem
-            // 
-            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
-            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
-            this.createDatabaseToolStripMenuItem.Text = "Create Database";
-            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
             // MainForm
             // 

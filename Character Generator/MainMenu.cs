@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Character_Generator
 {
@@ -66,7 +69,7 @@ namespace Character_Generator
 
         private void createDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Database creating function not ready. :(");
-        }
+            MessageBox.Show("To initialize the database, create it manually and run T-SQL query from file charactergenerator.sql.");
+        }     
     }
 }

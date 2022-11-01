@@ -22,6 +22,7 @@ namespace Character_Generator
                 "MultiSubnetFailover=False";
         }
 
+
         public bool ConnectDatabase()
         {
             dbConnection = new SqlConnection(connectionString);
