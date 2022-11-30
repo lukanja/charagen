@@ -24,13 +24,23 @@ namespace Character_Generator
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
+            //testing function with set value for the returned string   
+            if (databaseControl.GenerateTrait("LifePhase") == "error")
+            {
+                MessageBox.Show("Cannot generate character. Is database working?", "Error!");
+            }
+
             //generator working based on database table and object names
+            else
+            { 
             textBoxLifePhase.Text = databaseControl.GenerateTrait("LifePhase");
             textBoxMainTrait.Text = databaseControl.GenerateTrait("MainTrait");
             textBoxMainStrength.Text = databaseControl.GenerateTrait("MainStrength");
             textBoxMainFlaw.Text = databaseControl.GenerateTrait("MainFlaw");
             textBoxGoal.Text = databaseControl.GenerateTrait("Goal");
             textBoxSecret.Text = databaseControl.GenerateTrait("Secret");
+
+            } 
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -62,6 +72,14 @@ namespace Character_Generator
                 {
                     databaseControl.SaveCharacter(newCharacter);
                     MessageBox.Show("Saving completed.", "Success!");
+
+                    // empty fields
+                    textBoxLifePhase.Text = string.Empty;
+                    textBoxMainTrait.Text = string.Empty;
+                    textBoxMainStrength.Text = string.Empty;
+                    textBoxMainFlaw.Text = string.Empty;
+                    textBoxGoal.Text = string.Empty;
+                    textBoxSecret.Text = string.Empty;
                 }
 
                 catch (Exception error)

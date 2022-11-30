@@ -25,18 +25,15 @@ namespace Character_Generator
 
         public bool ConnectDatabase()
         {
-            dbConnection = new SqlConnection(connectionString);
-
             try
             {
+                dbConnection = new SqlConnection(connectionString);
                 dbConnection.Open();
                 return true;
             }
 
-            // for connection testing purposes
             catch (Exception e)
             {
-                Console.WriteLine("Virheilmoitukset:" + e);
                 return false;
             }
         }
@@ -50,19 +47,27 @@ namespace Character_Generator
         {
             string returnedTrait;
 
-            using (SqlConnection connection = new SqlConnection(connectionString)) // using statement doesn't leave the connection open
+            try
             {
-                SqlDataReader reader = null;
-                SqlCommand command = new SqlCommand(
-                "SELECT TOP 1" + wantedTrait +" FROM dbo." + wantedTrait + " ORDER BY NEWID();", connection); //rearranges the target table and gets the top value 
-                connection.Open();
-                reader = command.ExecuteReader();
-                reader.Read();
-                returnedTrait = reader.GetString(0);
-                reader.Close();
-            }
+                using (SqlConnection connection = new SqlConnection(connectionString)) // using statement doesn't leave the connection open
+                {
+                    SqlDataReader reader = null;
+                    SqlCommand command = new SqlCommand(
+                    "SELECT TOP 1" + wantedTrait + " FROM dbo." + wantedTrait + " ORDER BY NEWID();", connection); //rearranges the target table and gets the top value 
+                    connection.Open();
+                    reader = command.ExecuteReader();
+                    reader.Read();
+                    returnedTrait = reader.GetString(0);
+                    reader.Close();
+                }
 
-            return returnedTrait;
+                return returnedTrait;
+            }
+            catch (Exception e)
+            {
+                returnedTrait = "error";
+                return returnedTrait;
+            }
         }
 
         
